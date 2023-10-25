@@ -1,0 +1,12 @@
+.\obj\y6_otp.o: TDO_Y6xxBSP\Y6_StdPeriph_Driver\src\Y6_otp.c
+.\obj\y6_otp.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\misc.h
+.\obj\y6_otp.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
+.\obj\y6_otp.o: D:\Keil_v5\ARM\ARMCC\include\core_cm0.h
+.\obj\y6_otp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\y6_otp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\core_cmInstr.h
+.\obj\y6_otp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\core_cmFunc.h
+.\obj\y6_otp.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\system_Y6.h
+.\obj\y6_otp.o: ..\inc\Y6_conf.h
+.\obj\y6_otp.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\misc.h
+.\obj\y6_otp.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_otp.h
+.\obj\y6_otp.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_rcc.h

@@ -1,0 +1,19 @@
+*** Using Compiler 'V5.05 update 1 (build 106)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Y6'
+compiling main.c...
+..\src\main.c(32): warning:  #1295-D: Deprecated declaration red_led - give arg types
+  void red_led();
+..\src\main.c(33): warning:  #1295-D: Deprecated declaration red_led2 - give arg types
+  void red_led2();
+..\src\main.c(34): warning:  #1295-D: Deprecated declaration all_zero - give arg types
+  void all_zero();
+..\src\main.c(36): warning:  #1295-D: Deprecated declaration page_init - give arg types
+  void page_init();
+..\src\main.c: 4 warnings, 0 errors
+linking...
+Program Size: Code=82172 RO-data=45264 RW-data=596 ZI-data=31796  
+FromELF: creating hex file...
+After Build - User command #1: fromelf --bin ".\Obj\TDOGUIV1_0.axf" --output ".\Obj\TDOGUIV1_0.bin"
+After Build - User command #2: fromelf --text -c ".\Obj\TDOGUIV1_0.axf" --output ".\Obj\TDOGUIV1_0.txt"
+".\Obj\TDOGUIV1_0.axf" - 0 Error(s), 4 Warning(s).
+Build Time Elapsed:  00:00:02

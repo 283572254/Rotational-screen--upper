@@ -1,0 +1,12 @@
+.\obj\system_y6.o: TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Source\Templates\system_Y6.c
+.\obj\system_y6.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_rcc.h
+.\obj\system_y6.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
+.\obj\system_y6.o: ..\inc\core_cm0.h
+.\obj\system_y6.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\system_y6.o: ..\inc\core_cmInstr.h
+.\obj\system_y6.o: ..\inc\core_cmFunc.h
+.\obj\system_y6.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\system_Y6.h
+.\obj\system_y6.o: ..\inc\Y6_conf.h
+.\obj\system_y6.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\misc.h
+.\obj\system_y6.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
+.\obj\system_y6.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_wdg.h

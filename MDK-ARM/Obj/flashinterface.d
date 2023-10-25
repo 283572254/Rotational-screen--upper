@@ -1,0 +1,13 @@
+.\obj\flashinterface.o: Driver\flashInterface.c
+.\obj\flashinterface.o: .\gHMIY6GUI\includes\UsersProvided\flashInterface.h
+.\obj\flashinterface.o: .\gHMIY6GUI\includes\UsersUse\gStdint.h
+.\obj\flashinterface.o: Driver\Y6_xip_write.h
+.\obj\flashinterface.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
+.\obj\flashinterface.o: ..\inc\core_cm0.h
+.\obj\flashinterface.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\flashinterface.o: ..\inc\core_cmInstr.h
+.\obj\flashinterface.o: ..\inc\core_cmFunc.h
+.\obj\flashinterface.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\system_Y6.h
+.\obj\flashinterface.o: ..\inc\Y6_conf.h
+.\obj\flashinterface.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\misc.h
+.\obj\flashinterface.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h

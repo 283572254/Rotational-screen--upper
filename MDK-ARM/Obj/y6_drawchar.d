@@ -1,0 +1,9 @@
+.\obj\y6_drawchar.o: TDO_Driver\Y6_drawchar.c
+.\obj\y6_drawchar.o: TDO_Driver\Y6_drawchar.h
+.\obj\y6_drawchar.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\y6_drawchar.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\y6_drawchar.o: .\gHMIY6GUI\includes\UsersProvided\lcdInterface.h
+.\obj\y6_drawchar.o: .\gHMIY6GUI\includes\UsersUse\gStdint.h
+.\obj\y6_drawchar.o: .\gHMIY6GUI\includes\UsersUse\gWidgetInfo.h
+.\obj\y6_drawchar.o: .\gHMIY6GUI\includes\UsersUse\gReturn.h
+.\obj\y6_drawchar.o: .\gHMIY6GUI\includes\UsersUse\guiConfig.h
