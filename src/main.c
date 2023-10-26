@@ -86,14 +86,9 @@ uint8_t red_img[5] = {0},red_img2=0;
 				guiMainLoop();// GUI event loop	
 				Y6_Communication_Loop();
 				En_count =  encoder_getCounter ();
-
-				
-
+				key_control();
 				En_oldcount = En_count;
-				
-				
-
-												  							
+				rotary_control();								  							
 			}
 	}
 
