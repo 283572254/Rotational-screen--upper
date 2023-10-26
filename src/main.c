@@ -34,6 +34,8 @@ void red_led2();
 void all_zero();
 void en_count(char first,char late);
 void page_init();
+void key_control();
+void rotary_control();
 void outclk_init(void)
 {
   GPIO_SetPinMux(GPIO0, GPIO_Pin_25, GPIO_FUNCTION_3);
@@ -56,8 +58,8 @@ char Enter_click=0;     //1: Rotate to adjust arcs and numbers
 						// 0:Rotation adjustment function interface
 char IMG=1;	
 char Logo=1;
-char key_flag = 0;//ÐýÅ¥Î»ÖÃ
-char key_flag2 = 0;//°´¼üÎ»ÖÃ
+char key_flag = 0;//ï¿½ï¿½Å¥Î»ï¿½ï¿½
+char key_flag2 = 0;//ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 char red_flag = 0; 
 int En_count,En_oldcount=0;	
 uint8_t red_arr[5]={0};
@@ -84,52 +86,9 @@ uint8_t red_img[5] = {0},red_img2=0;
 				guiMainLoop();// GUI event loop	
 				Y6_Communication_Loop();
 				En_count =  encoder_getCounter ();
-				switch(Key_Scan())
-				{
-					case 3:    //Button short press  
-					if(Enter_click == 0){					
-							switch(key_flag)
-							{
-								case 0:page_init();break;
-								case 1:red_led();break;
-								case 2:break;
-								case 3:break;
-								case 4:break;
-								case 5:red_led2();break;
-							}
-							printf("key_flag2 =%d\n",key_flag2);
-							printf("key_flag = %d\n",key_flag);								
-						}
-					else 
-						Enter_click=0;
-					break;
-				case 4:	
-						printf("key_flag = %d\n",key_flag);
-						all_zero();
-						guiJumpPage(Test01Page_wID,GUI_NULL,DemoMain_PageEnterEvent);
-						Logo=1;
-					break;
-				default:
-					break;			
-				}
+
 				
-				if(En_count !=En_oldcount)
-				{												
-					Logo=0;															
-					switch(key_flag)
-					{
-						case 0:en_count(1,4);guiJumpPage(Test01Page_wID,GUI_NULL,DemoMain_PageEnterEvent);break;
-						case 1:en_count(1,6);guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);break;
-						case 2:en_count(1,100);break;
-						case 3:en_count(1,2);break;
-						case 4:en_count(1,100);break;
-						case 5:en_count(1,2);guiJumpPage(Tred_led_wID2,GUI_NULL,red_led_PageEnterEvent2);break;
-					}
-				printf("img = %d\n",IMG);
-				printf("En_count = %d\n",En_count);
-				printf("En_oldcount = %d\n",En_oldcount);
-		
-				}
+
 				En_oldcount = En_count;
 				
 				
@@ -137,6 +96,60 @@ uint8_t red_img[5] = {0},red_img2=0;
 												  							
 			}
 	}
+
+
+void key_control()
+{
+	switch(Key_Scan())
+	{
+		case 3:    //Button short press  
+		if(Enter_click == 0){					
+				switch(key_flag)
+				{
+					case 0:page_init();break;
+					case 1:red_led();break;
+					case 2:break;
+					case 3:break;
+					case 4:break;
+					case 5:red_led2();break;
+				}
+				printf("key_flag2 =%d\n",key_flag2);
+				printf("key_flag = %d\n",key_flag);								
+			}
+		else 
+			Enter_click=0;
+		break;
+	case 4:	
+			printf("key_flag = %d\n",key_flag);
+			all_zero();
+			guiJumpPage(Test01Page_wID,GUI_NULL,DemoMain_PageEnterEvent);
+			Logo=1;
+		break;
+	default:
+		break;			
+	}
+}
+
+void rotary_control()
+{
+	if(En_count !=En_oldcount)
+	{												
+		Logo=0;															
+		switch(key_flag)
+		{
+			case 0:en_count(1,4);guiJumpPage(Test01Page_wID,GUI_NULL,DemoMain_PageEnterEvent);break;
+			case 1:en_count(1,6);guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);break;
+			case 2:en_count(1,100);break;
+			case 3:en_count(1,2);break;
+			case 4:en_count(1,100);break;
+			case 5:en_count(1,2);guiJumpPage(Tred_led_wID2,GUI_NULL,red_led_PageEnterEvent2);break;
+		}
+	printf("img = %d\n",IMG);
+	printf("En_count = %d\n",En_count);
+	printf("En_oldcount = %d\n",En_oldcount);
+
+	}
+}
 
 void page_init()
 {
@@ -173,7 +186,7 @@ void en_count(char first,char late)
 	else
 	{
 		if(En_oldcount < En_count)
-		{
+{
 			IMG++;
 			if(IMG>late)
 				IMG = first;
@@ -188,7 +201,7 @@ void en_count(char first,char late)
 	}	
 
 }
-//ºìÉ«led¹¦ÄÜ
+//ï¿½ï¿½É«ledï¿½ï¿½ï¿½ï¿½
 void red_led()
 {
 	if(red_flag==1)
@@ -201,7 +214,7 @@ void red_led()
 			case 3:red_arr[2]=1;red_img[2]=5;printf("red_img[2] = %d",red_img[2]);break;
 			case 4:red_arr[3]=1;red_img[3]=8;printf("red_img[3] = %d",red_img[3]);break;
 			case 5:red_arr[4]=1;red_img[4]=0;printf("red_img[4] = %d",red_img[4]);break;
-			case 6:key_flag=5;guiJumpPage(Tred_led_wID2,GUI_NULL,red_led_PageEnterEvent2);break;//Ìø×ªµ½È·ÈÏ½çÃæ,ÏÔÊ¾³öÑ¡ÔñµÄÆÀÂÊ
+			case 6:key_flag=5;guiJumpPage(Tred_led_wID2,GUI_NULL,red_led_PageEnterEvent2);break;//ï¿½ï¿½×ªï¿½ï¿½È·ï¿½Ï½ï¿½ï¿½ï¿½,ï¿½ï¿½Ê¾ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			default:break;
 		}
 	}
@@ -225,11 +238,11 @@ void red_led2()
 	}
 }
 
-//ºìÍâled¹¦ÄÜ
+//ï¿½ï¿½ï¿½ï¿½ledï¿½ï¿½ï¿½ï¿½
 
-//Æø±Ã¹¦ÄÜ
+//ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½ï¿½
 
-//·çÉÈ¹¦ÄÜ
+//ï¿½ï¿½ï¿½È¹ï¿½ï¿½ï¿½
 
 
 void all_zero()
