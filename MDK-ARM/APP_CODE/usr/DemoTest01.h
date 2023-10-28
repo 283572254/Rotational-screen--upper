@@ -148,7 +148,7 @@ static const PICTUREBOX_INFO red_led_10={
 #define red_led_onoff_ID 0x1611 //
 static const PICTUREBOX_INFO red_led_onoff={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_onoff_ID , .wVscope = WIDGET_VS_PRIVATE},
- {.x = 60 , .y = 160 , .width = 60 , .height = 60},    
+ {.x = 90 , .y = 160 , .width = 60 , .height = 60},    
  .picId = 22,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
@@ -163,10 +163,120 @@ static const GTIMER_INFO red_led_GTimer2={
  .timeValue = 0,                     //Timer current count value (period is 1MS) lower 16 bits are current counter value, higher 16 bits are timer overflow flag, or other identification
  .timeoutEvent = GUI_NULL
 };
-void DemoTestPage_Init(void);
+
 gui_Err red_led_PageEnterEvent2(gui_int32 argc , const char **argv);
 static gui_Err red_led_timeoutEvent2 (gui_int32 argc , const char **argv);
 gui_Err red_led_LeaveEvent2(gui_int32 argc , const char **argv);
+
+/****************************************************  infrared led page*************************************************/	
+#define infrared_led_wID 0x1613
+static const PAGE_INFO infrared_led_Page={
+	{.wType = WIDGET_TYPE_PAGE , .wId = infrared_led_wID , .wVscope = WIDGET_VS_PRIVATE},
+	{.x = 0 , .y = 0 , .width = 240 , .height = 240},
+	.backMode = WIDGET_BACKMODE_PIC , 
+	.backColor = 0xFFFF,
+ .picId = 0,
+	.enterEvent = GUI_NULL,
+	.leaveEvent = GUI_NULL,
+	.pressEvent = GUI_NULL,
+	.releaseEvent = GUI_NULL,
+};
+
+#define infrared_led_PicwID 0x1614 //
+static const PICTUREBOX_INFO infrared_led_Pic={
+ {.wType = WIDGET_TYPE_PICTUREBOX , .wId = infrared_led_PicwID , .wVscope = WIDGET_VS_PRIVATE},
+ {.x = 0 , .y = 0 , .width = 240 , .height = 240},    
+ .picId = 0,
+ .pressEvent = GUI_NULL,               
+ .releaseEvent = GUI_NULL,             
+ .updateEvent = GUI_NULL  
+};
+#define infrared_led_GTimerwID 0x1615
+static const GTIMER_INFO infrared_led_GTimer={
+ {.wType = WIDGET_TYPE_GTIMER , .wId = infrared_led_GTimerwID, .wVscope = WIDGET_VS_PRIVATE},
+ .timeOut =50,
+ .enable = 1,                         //Timer switch bit, 0 off, 1 on
+ .timeValue = 0,                     //Timer current count value (period is 1MS) lower 16 bits are current counter value, higher 16 bits are timer overflow flag, or other identification
+ .timeoutEvent = GUI_NULL
+};
+#define infrared_led_ID1 0x1616 //
+static const PICTUREBOX_INFO infrared_led_1={
+ {.wType = WIDGET_TYPE_PICTUREBOX , .wId = infrared_led_ID1 , .wVscope = WIDGET_VS_PRIVATE},
+ {.x = 66 , .y = 102 , .width = 34 , .height = 46},    
+ .picId = 24,
+ .pressEvent = GUI_NULL,               
+ .releaseEvent = GUI_NULL,             
+ .updateEvent = GUI_NULL  
+};
+#define infrared_led_ID2 0x1617 //
+static const PICTUREBOX_INFO infrared_led_2={
+ {.wType = WIDGET_TYPE_PICTUREBOX , .wId = infrared_led_ID2 , .wVscope = WIDGET_VS_PRIVATE},
+ {.x = 102 , .y = 102 , .width = 34 , .height = 46},    
+ .picId = 24,
+ .pressEvent = GUI_NULL,               
+ .releaseEvent = GUI_NULL,             
+ .updateEvent = GUI_NULL  
+};
+
+#define infrared_led_ID3 0x1618 //
+static const PICTUREBOX_INFO infrared_led_3={
+ {.wType = WIDGET_TYPE_PICTUREBOX , .wId = infrared_led_ID3 , .wVscope = WIDGET_VS_PRIVATE},
+ {.x = 138 , .y = 102 , .width = 34 , .height = 46},    
+ .picId = 24,
+ .pressEvent = GUI_NULL,               
+ .releaseEvent = GUI_NULL,             
+ .updateEvent = GUI_NULL  
+};
+
+gui_Err infrared_PageEnterEvent(gui_int32 argc , const char **argv);
+static gui_Err infrared_timeoutEvent (gui_int32 argc , const char **argv);
+gui_Err infrared_LeaveEvent(gui_int32 argc , const char **argv);
+/****************************************************  infrared_led2 page*************************************************/	
+#define infrared_led_wID2 0x1619
+static const PAGE_INFO infrared_led_Page2={
+	{.wType = WIDGET_TYPE_PAGE , .wId = infrared_led_wID2 , .wVscope = WIDGET_VS_PRIVATE},
+	{.x = 0 , .y = 0 , .width = 240 , .height = 240},
+	.backMode = WIDGET_BACKMODE_PIC , 
+	.backColor = 0xFFFF,
+ .picId = 0,
+	.enterEvent = GUI_NULL,
+	.leaveEvent = GUI_NULL,
+	.pressEvent = GUI_NULL,
+	.releaseEvent = GUI_NULL,
+};
+
+#define infrared_led_PicwID2 0x1620 //
+static const PICTUREBOX_INFO infrared_led_Pic2={
+ {.wType = WIDGET_TYPE_PICTUREBOX , .wId = infrared_led_PicwID2 , .wVscope = WIDGET_VS_PRIVATE},
+ {.x = 0 , .y = 0 , .width = 240 , .height = 240},    
+ .picId = 0,
+ .pressEvent = GUI_NULL,               
+ .releaseEvent = GUI_NULL,             
+ .updateEvent = GUI_NULL  
+};
+#define infrared_led_GTimerwID2 0x1621
+static const GTIMER_INFO infrared_led_GTimer2={
+ {.wType = WIDGET_TYPE_GTIMER , .wId = infrared_led_GTimerwID2, .wVscope = WIDGET_VS_PRIVATE},
+ .timeOut =50,
+ .enable = 1,                         //Timer switch bit, 0 off, 1 on
+ .timeValue = 0,                     //Timer current count value (period is 1MS) lower 16 bits are current counter value, higher 16 bits are timer overflow flag, or other identification
+ .timeoutEvent = GUI_NULL
+};
+
+gui_Err infrared_PageEnterEvent2(gui_int32 argc , const char **argv);
+static gui_Err infrared_timeoutEvent2(gui_int32 argc , const char **argv);
+gui_Err infrared_LeaveEvent2(gui_int32 argc , const char **argv);
+
+/****************************************************  Pump page*************************************************/	
+#define infrared_led_pump_ID 0x1622 //
+static const PICTUREBOX_INFO infrared_led_pump={
+ {.wType = WIDGET_TYPE_PICTUREBOX , .wId = infrared_led_pump_ID , .wVscope = WIDGET_VS_PRIVATE},
+ {.x = 0 , .y = 0 , .width = 240 , .height = 240},    
+ .picId = 33,
+ .pressEvent = GUI_NULL,               
+ .releaseEvent = GUI_NULL,             
+ .updateEvent = GUI_NULL  
+};
 /****************************************************  shortKey page*************************************************/	
 #define Short_Key_PwID 0x1504
 static const PAGE_INFO Encoder_shortKey={
@@ -216,7 +326,7 @@ static const PICTUREBOX_INFO Hour2_Pic={
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
 };
-#define Colon_PicwID 0x1512 //£º
+#define Colon_PicwID 0x1512 //ï¿½ï¿½
 static const PICTUREBOX_INFO Colon_Pic={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = Colon_PicwID , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 105 , .y = 97 , .width = 34 , .height = 46},    

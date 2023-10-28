@@ -14,8 +14,10 @@ char menu[4]={8,0,0,0};      //menu[0]: text image                  menu[1]: whe
 
 char img_id[]={0,1,2,3,4};
 char img_id1[]={21,5,6,7,8,9,10};
-char img_id2[]={20,11,12,13,14,15,16,17,18,19};
-char img_id3[]={22,23};
+char img_id2[]={20,11,12,13,14,15,16,17,18,19};// small num
+char img_id3[]={22,23}; //on off
+char img_id4[]={24,25,26,27,28,29,30,31,32,33};
+char img_id5[]={33,34};
 void DemoTestPage_Init(void)
 { 
 	guiJumpPage(GUI_NULL,GUI_NULL,DemoMain_PageEnterEvent);
@@ -96,18 +98,74 @@ gui_Err red_led_PageEnterEvent2(gui_int32 argc , const char **argv)
 static gui_Err red_led_timeoutEvent2 (gui_int32 argc , const char **argv)
 {    			
 
-	guiSetWidgetPictureID(red_led_ID1,img_id2[red_img[0]]);
-	guiSetWidgetPictureID(red_led_ID2,img_id2[red_img[1]]);
-	guiSetWidgetPictureID(red_led_ID5,img_id2[red_img[2]]);
-	guiSetWidgetPictureID(red_led_ID8,img_id2[red_img[3]]);
-	guiSetWidgetPictureID(red_led_ID10,img_id2[red_img[4]]);
-	guiSetWidgetPictureID(red_led_onoff_ID,img_id3[IMG]);
+	guiSetWidgetPictureID(red_led_ID1,img_id4[red_img[0]]);
+	guiSetWidgetPictureID(red_led_ID2,img_id4[red_img[1]]);
+	guiSetWidgetPictureID(red_led_ID5,img_id4[red_img[2]]);
+	guiSetWidgetPictureID(red_led_ID8,img_id4[red_img[3]]);
+	guiSetWidgetPictureID(red_led_ID10,img_id4[red_img[4]]);
+	guiSetWidgetPictureID(red_led_onoff_ID,img_id3[IMG-1]);
 	return GUI_EOK;
 }
 gui_Err red_led_LeaveEvent2(gui_int32 argc , const char **argv)
 {	
 	return GUI_EOK;
 }
+
+/**************************************************infrared action to enter the page**********************************************/
+gui_Err infrared_PageEnterEvent(gui_int32 argc , const char **argv)
+{
+	guiCreateWidget((const void *)&infrared_led_Page);
+	guiCreateWidget((const void *)&infrared_led_Pic);
+	
+
+	guiCreateWidget((const void *)&infrared_led_1);
+	guiCreateWidget((const void *)&infrared_led_2);
+	guiCreateWidget((const void *)&infrared_led_3);
+	guiCreateWidget((const void *)&infrared_led_GTimer);
+	Enter_click = 0;
+	guiRegisterEvent(EVENT_REGISTER_TYPE_TIMEOUT , infrared_led_GTimerwID , infrared_timeoutEvent);	
+	return GUI_EOK;
+}
+
+static gui_Err infrared_timeoutEvent (gui_int32 argc , const char **argv)
+{    			
+
+	guiSetWidgetPictureID(infrared_led_ID1,img_id4[IMG/100]);
+	guiSetWidgetPictureID(infrared_led_ID2,img_id4[(IMG/10)%10]);
+	guiSetWidgetPictureID(infrared_led_ID3,img_id4[IMG%10]);
+
+	return GUI_EOK;
+}
+gui_Err infrared_LeaveEvent(gui_int32 argc , const char **argv)
+{	
+	return GUI_EOK;
+}
+/**************************************************infrared led2 action to enter the page**********************************************/
+gui_Err infrared_PageEnterEvent2(gui_int32 argc , const char **argv)
+{
+	guiCreateWidget((const void *)&infrared_led_Page2);
+	guiCreateWidget((const void *)&infrared_led_Pic2);
+	
+
+	guiCreateWidget((const void *)&infrared_led_pump);
+	guiCreateWidget((const void *)&infrared_led_GTimer2);
+	Enter_click = 0;
+	guiRegisterEvent(EVENT_REGISTER_TYPE_TIMEOUT , infrared_led_GTimerwID2 , infrared_timeoutEvent2);	
+	return GUI_EOK;
+}
+
+static gui_Err infrared_timeoutEvent2 (gui_int32 argc , const char **argv)
+{    			
+
+	guiSetWidgetPictureID(infrared_led_pump_ID,img_id5[IMG-1]);
+
+	return GUI_EOK;
+}
+gui_Err infrared_LeaveEvent2(gui_int32 argc , const char **argv)
+{	
+	return GUI_EOK;
+}
+/**************************************************fan action to enter the page**********************************************/
 
 /**************************************************Short press action to enter the page**********************************************/
 void Set_time(gui_int16 hours1,gui_int16 hours2,gui_int16 minutes1,gui_int16 minutes2)
