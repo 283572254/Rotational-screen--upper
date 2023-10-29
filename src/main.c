@@ -70,12 +70,11 @@ char key_flag2 = 0;//����λ��
 char init_flag = 0; 
 int En_count,En_oldcount=0;	
 uint8_t red_arr[5]={0},red_arr2[5]={0};
-uint8_t printf_arr[11]={0};
+uint8_t printf_arr[7]={0};
 uint8_t red_img[5] = {0},red_img2=0;
 #define Get_Key()     GPIO_ReadPin(GPIO0,GPIO_Pin_28)
 int main()
 {
-	
 	/*******************Initialize a series of MCU peripherals, then start the GUI*******************/
 	uint8_t ret;	
 			
@@ -160,7 +159,7 @@ void rotary_control()
 
 void page_init()
 {
-	for(int i=0;i<12;i++)
+	for(int i=0;i<7;i++)
 	{
 		printf("%d",printf_arr[i]);
 	}
@@ -253,7 +252,7 @@ void red_led2()
 		{
 			for(int i=0;i<5;i++)
 			{
-				printf_arr[i+6] = red_arr[i];
+				printf_arr[i+2] = red_arr[i];
 				red_img[i] = 0;
 				red_arr[i] = 0;
 			}
@@ -263,18 +262,18 @@ void red_led2()
 			printf("img = %d\n",IMG);
 			if(IMG==1)
 			{
-				printf_arr[0] = 1;printf_arr[4] = 1;
-				for(int i=0;i<11;i++)
+				printf_arr[0] = 1;printf_arr[1] = 1;
+				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);	
 				}
 			}
 			else
 			{
-				printf_arr[0] = 1;printf_arr[4] = 0;
+				printf_arr[0] = 1;printf_arr[1] = 0;
 				for(int i=0;i<5;i++)
-					printf_arr[i+6] = 0;
-				for(int i=0;i<11;i++)
+					printf_arr[i+2] = 0;
+				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);	
 				}
@@ -313,7 +312,7 @@ void red_led4()
 		{
 			for(int i=0;i<5;i++)
 			{
-				printf_arr[i+5] = red_arr2[i];
+				printf_arr[i+2] = red_arr2[i];
 				red_img[i] = 0;
 				red_arr2[i] = 0;
 			}				
@@ -323,18 +322,18 @@ void red_led4()
 			printf("img = %d\n",IMG);
 			if(IMG==1)
 			{
-				printf_arr[0] = 1;printf_arr[5] = 2;
-				for(int i=0;i<11;i++)
+				printf_arr[0] = 2;printf_arr[1] = 1;
+				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);	
 				}
 			}
 			else
 			{
-				printf_arr[0] = 1;printf_arr[5] = 0;
+				printf_arr[0] = 1;printf_arr[1] = 0;
 				for(int i=0;i<5;i++)
-					printf_arr[i+6] = 0;
-				for(int i=0;i<11;i++)
+					printf_arr[i+2] = 0;
+				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);	
 				}
@@ -356,9 +355,9 @@ void infrared_red()
 			key_flag = 8;
 			key_flag2=0;
 			guiJumpPage(infrared_led_wID2,GUI_NULL,infrared_PageEnterEvent2);
-			printf_arr[8] = IMG/100;
-			printf_arr[9] = (IMG/10)%10;
-			printf_arr[10] = IMG%10;
+			printf_arr[2] = IMG/100;
+			printf_arr[3] = (IMG/10)%10;
+			printf_arr[4] = IMG%10;
 			IMG = 1;
 			
 		}
@@ -380,18 +379,18 @@ void infrared_red2()
 			printf("img = %d\n",IMG);
 			if(IMG == 1)
 			{
-				printf_arr[1] = 2;
-				for(int i=0;i<11;i++)
+				printf_arr[0] = 3;printf_arr[1] = 1;
+				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);
 				}
 			}
 			else
 			{
-				printf_arr[1] = 0;
+				printf_arr[0] = 3;printf_arr[1] = 0;
 				for(int i=0;i<5;i++)
-					printf_arr[i+6] = 0;
-				for(int i=0;i<11;i++)
+					printf_arr[i+2] = 0;
+				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);
 				}				
@@ -415,22 +414,22 @@ void pump()
 			key_flag = 0;
 			key_flag2=0;
 			guiJumpPage(Test01Page_wID,GUI_NULL,DemoMain_PageEnterEvent);
-			printf_arr[6] = IMG;
+			
 			printf("img = %d\n",IMG);
 			if(IMG==1)
 			{
-				printf_arr[2] = 3;
-				for(int i=0;i<11;i++)
+				printf_arr[0] = 4;printf_arr[1] = 1;
+				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);	
 				}
 			}
 			else
 			{
-				printf_arr[2] = 0;
+				printf_arr[0] = 4;printf_arr[1] = 0;
 				for(int i=0;i<5;i++)
-					printf_arr[i+6] = 0;
-				for(int i=0;i<11;i++)
+					printf_arr[i+2] = 0;
+				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);
 				}	
@@ -458,9 +457,9 @@ void fan()
 			key_flag = 9;
 			key_flag2=0;
 			guiJumpPage(infrared_led_wID2,GUI_NULL,infrared_PageEnterEvent2);
-			printf_arr[8] = IMG/100;
-			printf_arr[9] = (IMG/10)%10;
-			printf_arr[10] = IMG%10;
+			printf_arr[2] = IMG/100;
+			printf_arr[3] = (IMG/10)%10;
+			printf_arr[4] = IMG%10;
 			IMG = 1;
 		}
 	}	
@@ -480,18 +479,18 @@ void fan2()
 			printf("img = %d\n",IMG);
 			if(IMG==1)
 			{
-				printf_arr[3] = 4;
-				for(int i=0;i<11;i++)
+				printf_arr[0] = 5;printf_arr[1] = 1;
+				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);	
 				}
 			}
 			else
 			{
-				printf_arr[3] = 0;
+				printf_arr[0] = 5;printf_arr[1] = 0;
 				for(int i=0;i<5;i++)
-					printf_arr[i+6] = 0;
-				for(int i=0;i<11;i++)
+					printf_arr[i+2] = 0;
+				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);
 				}	

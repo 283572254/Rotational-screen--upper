@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Obj\TDOGUIV1_0.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Obj\TDOGUIV1_0.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sun Oct 29 16:24:51 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sun Oct 29 17:03:08 2023
 <BR><P>
 <H3>Maximum Stack Usage =        700 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1049,6 +1049,7 @@ Global Symbols
 <LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiDeleteWidgetText
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiAppendWidgetText
 <LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiSetWidgetPictureID
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_registerRoundSliderEvent
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_createRoundSlider
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_registerGraphEvent
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_deleteGraph
@@ -1111,7 +1112,6 @@ Global Symbols
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;widget_TimeoutAdjustPicanimation
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_registerPicanimationEvent
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_createPicanimation
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_registerRoundSliderEvent
 <LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;leaveKeyBoard
 <LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enterKeyBoard
 </UL>
@@ -2447,7 +2447,7 @@ Global Symbols
 <LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wCreateFullKeyBoard
 </UL>
 
-<P><STRONG><a name="[210]"></a>fan</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, main.o(i.fan))
+<P><STRONG><a name="[210]"></a>fan</STRONG> (Thumb, 114 bytes, Stack size 24 bytes, main.o(i.fan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 388<LI>Call Chain = fan &rArr; guiJumpPage &rArr; wWidgetLoad &rArr; wGetResoureAddr &rArr; guiDebug &rArr; vsnprintf &rArr; PutUnsignedInt &rArr;  PutUnsignedInt (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiJumpPage
@@ -2457,8 +2457,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_control
 </UL>
 
-<P><STRONG><a name="[211]"></a>fan2</STRONG> (Thumb, 120 bytes, Stack size 24 bytes, main.o(i.fan2))
-<BR><BR>[Stack]<UL><LI>Max Depth = 388<LI>Call Chain = fan2 &rArr; guiJumpPage &rArr; wWidgetLoad &rArr; wGetResoureAddr &rArr; guiDebug &rArr; vsnprintf &rArr; PutUnsignedInt &rArr;  PutUnsignedInt (Cycle)
+<P><STRONG><a name="[211]"></a>fan2</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, main.o(i.fan2))
+<BR><BR>[Stack]<UL><LI>Max Depth = 380<LI>Call Chain = fan2 &rArr; guiJumpPage &rArr; wWidgetLoad &rArr; wGetResoureAddr &rArr; guiDebug &rArr; vsnprintf &rArr; PutUnsignedInt &rArr;  PutUnsignedInt (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiJumpPage
 <LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;en_count
@@ -2807,7 +2807,7 @@ Global Symbols
 <LI> main.o(i.pump)
 <LI> main.o(i.rotary_control)
 </UL>
-<P><STRONG><a name="[231]"></a>infrared_red</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, main.o(i.infrared_red))
+<P><STRONG><a name="[231]"></a>infrared_red</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, main.o(i.infrared_red))
 <BR><BR>[Stack]<UL><LI>Max Depth = 380<LI>Call Chain = infrared_red &rArr; guiJumpPage &rArr; wWidgetLoad &rArr; wGetResoureAddr &rArr; guiDebug &rArr; vsnprintf &rArr; PutUnsignedInt &rArr;  PutUnsignedInt (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiJumpPage
@@ -2816,7 +2816,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_control
 </UL>
 
-<P><STRONG><a name="[232]"></a>infrared_red2</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, main.o(i.infrared_red2))
+<P><STRONG><a name="[232]"></a>infrared_red2</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, main.o(i.infrared_red2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 388<LI>Call Chain = infrared_red2 &rArr; guiJumpPage &rArr; wWidgetLoad &rArr; wGetResoureAddr &rArr; guiDebug &rArr; vsnprintf &rArr; PutUnsignedInt &rArr;  PutUnsignedInt (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiJumpPage
@@ -2895,7 +2895,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[239]"></a>page_init</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, main.o(i.page_init))
+<P><STRONG><a name="[239]"></a>page_init</STRONG> (Thumb, 124 bytes, Stack size 16 bytes, main.o(i.page_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 380<LI>Call Chain = page_init &rArr; guiJumpPage &rArr; wWidgetLoad &rArr; wGetResoureAddr &rArr; guiDebug &rArr; vsnprintf &rArr; PutUnsignedInt &rArr;  PutUnsignedInt (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiJumpPage
@@ -2915,7 +2915,7 @@ Global Symbols
 <BR>[Address Reference Count : 2]<UL><LI> systemuart.o(.constdata)
 <LI> cominterface.o(.constdata)
 </UL>
-<P><STRONG><a name="[23b]"></a>pump</STRONG> (Thumb, 120 bytes, Stack size 16 bytes, main.o(i.pump))
+<P><STRONG><a name="[23b]"></a>pump</STRONG> (Thumb, 124 bytes, Stack size 16 bytes, main.o(i.pump))
 <BR><BR>[Stack]<UL><LI>Max Depth = 380<LI>Call Chain = pump &rArr; guiJumpPage &rArr; wWidgetLoad &rArr; wGetResoureAddr &rArr; guiDebug &rArr; vsnprintf &rArr; PutUnsignedInt &rArr;  PutUnsignedInt (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiJumpPage
@@ -2975,7 +2975,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_control
 </UL>
 
-<P><STRONG><a name="[23e]"></a>red_led4</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, main.o(i.red_led4))
+<P><STRONG><a name="[23e]"></a>red_led4</STRONG> (Thumb, 140 bytes, Stack size 24 bytes, main.o(i.red_led4))
 <BR><BR>[Stack]<UL><LI>Max Depth = 388<LI>Call Chain = red_led4 &rArr; guiJumpPage &rArr; wWidgetLoad &rArr; wGetResoureAddr &rArr; guiDebug &rArr; vsnprintf &rArr; PutUnsignedInt &rArr;  PutUnsignedInt (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiJumpPage
