@@ -1,6 +1,37 @@
 *** Using Compiler 'V5.05 update 1 (build 106)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Y6'
+compiling main.c...
+..\src\main.c(32): warning:  #1295-D: Deprecated declaration red_led - give arg types
+  void red_led();
+..\src\main.c(33): warning:  #1295-D: Deprecated declaration red_led2 - give arg types
+  void red_led2();
+..\src\main.c(34): warning:  #1295-D: Deprecated declaration red_led3 - give arg types
+  void red_led3();
+..\src\main.c(35): warning:  #1295-D: Deprecated declaration red_led4 - give arg types
+  void red_led4();
+..\src\main.c(36): warning:  #1295-D: Deprecated declaration infrared_red - give arg types
+  void infrared_red();
+..\src\main.c(37): warning:  #1295-D: Deprecated declaration infrared_red2 - give arg types
+  void infrared_red2();
+..\src\main.c(38): warning:  #1295-D: Deprecated declaration pump - give arg types
+  void pump();
+..\src\main.c(39): warning:  #1295-D: Deprecated declaration fan - give arg types
+  void fan();
+..\src\main.c(40): warning:  #1295-D: Deprecated declaration fan2 - give arg types
+  void fan2();
+..\src\main.c(41): warning:  #1295-D: Deprecated declaration all_zero - give arg types
+  void all_zero();
+..\src\main.c(43): warning:  #1295-D: Deprecated declaration page_init - give arg types
+  void page_init();
+..\src\main.c(44): warning:  #1295-D: Deprecated declaration key_control - give arg types
+  void key_control();
+..\src\main.c(45): warning:  #1295-D: Deprecated declaration rotary_control - give arg types
+  void rotary_control();
+..\src\main.c: 13 warnings, 0 errors
+linking...
+Program Size: Code=83688 RO-data=45588 RW-data=600 ZI-data=31808  
+FromELF: creating hex file...
 After Build - User command #1: fromelf --bin ".\Obj\TDOGUIV1_0.axf" --output ".\Obj\TDOGUIV1_0.bin"
 After Build - User command #2: fromelf --text -c ".\Obj\TDOGUIV1_0.axf" --output ".\Obj\TDOGUIV1_0.txt"
-".\Obj\TDOGUIV1_0.axf" - 0 Error(s), 0 Warning(s).
+".\Obj\TDOGUIV1_0.axf" - 0 Error(s), 13 Warning(s).
 Build Time Elapsed:  00:00:01

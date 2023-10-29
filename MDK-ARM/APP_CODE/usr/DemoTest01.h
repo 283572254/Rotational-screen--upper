@@ -144,7 +144,25 @@ static const PICTUREBOX_INFO red_led_10={
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
 };
+#define red_led_ID10_1 0x1623 //
+static const PICTUREBOX_INFO red_led_10_1={
+ {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_ID10_1 , .wVscope = WIDGET_VS_PRIVATE},
+ {.x = 200 , .y = 102 , .width = 36 , .height = 36},    
+ .picId = 20,
+ .pressEvent = GUI_NULL,               
+ .releaseEvent = GUI_NULL,             
+ .updateEvent = GUI_NULL  
+};
 
+#define red_led_location_ID 0x1624 //
+static const PICTUREBOX_INFO red_led_location={
+ {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_location_ID , .wVscope = WIDGET_VS_PRIVATE},
+ {.x = 0 , .y = 120 , .width = 36 , .height = 36},    
+ .picId = 20,
+ .pressEvent = GUI_NULL,               
+ .releaseEvent = GUI_NULL,             
+ .updateEvent = GUI_NULL  
+};
 #define red_led_onoff_ID 0x1611 //
 static const PICTUREBOX_INFO red_led_onoff={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_onoff_ID , .wVscope = WIDGET_VS_PRIVATE},
@@ -277,6 +295,7 @@ static const PICTUREBOX_INFO infrared_led_pump={
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
 };
+//ID 0x1623
 /****************************************************  shortKey page*************************************************/	
 #define Short_Key_PwID 0x1504
 static const PAGE_INFO Encoder_shortKey={
