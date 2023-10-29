@@ -154,10 +154,10 @@ static const PICTUREBOX_INFO red_led_10_1={
  .updateEvent = GUI_NULL  
 };
 
-#define red_led_location_ID 0x1624 //
+#define red_led_location_ID 0x1624 // 红外组别确认
 static const PICTUREBOX_INFO red_led_location={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_location_ID , .wVscope = WIDGET_VS_PRIVATE},
- {.x = 0 , .y = 120 , .width = 36 , .height = 36},    
+ {.x = 5 , .y = 102 , .width = 36 , .height = 36},    
  .picId = 20,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
@@ -295,7 +295,7 @@ static const PICTUREBOX_INFO infrared_led_pump={
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
 };
-//ID 0x1623
+//ID 0x1624
 /****************************************************  shortKey page*************************************************/	
 #define Short_Key_PwID 0x1504
 static const PAGE_INFO Encoder_shortKey={

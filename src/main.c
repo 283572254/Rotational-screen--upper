@@ -139,11 +139,12 @@ void key_control()
 void rotary_control()
 {
 	if(En_count !=En_oldcount)
-	{												
+	{	
+												
 		Logo=0;															
 		switch(key_flag)
 		{
-			case 0:en_count(1,4);guiJumpPage(Test01Page_wID,GUI_NULL,DemoMain_PageEnterEvent);break;
+			case 0:en_count(1,5);guiJumpPage(Test01Page_wID,GUI_NULL,DemoMain_PageEnterEvent);break;
 			case 1:en_count(1,6);guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);break;
 			case 2:en_count(1,100);guiJumpPage(infrared_led_wID,GUI_NULL,infrared_PageEnterEvent);printf("%d,%d,%d",IMG/100,(IMG/10)%10,IMG%10);break;
 			case 3:en_count(1,2);guiJumpPage(infrared_led_wID2,GUI_NULL,infrared_PageEnterEvent2);break;
@@ -154,7 +155,9 @@ void rotary_control()
 			case 8:en_count(1,2);guiJumpPage(infrared_led_wID2,GUI_NULL,infrared_PageEnterEvent2);break;
 			case 9:en_count(1,2);guiJumpPage(infrared_led_wID2,GUI_NULL,infrared_PageEnterEvent2);break;
 		}
+		
 	}
+	
 }
 
 void page_init()
@@ -163,13 +166,15 @@ void page_init()
 	{
 		printf("%d",printf_arr[i]);
 	}
+	
 	switch(IMG)
 	{
 		case 0:guiJumpPage(Test01Page_wID,GUI_NULL,DemoMain_PageEnterEvent);IMG = 1;break;
 		case 1: key_flag=1;guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);IMG = 1;break;
-		case 2: key_flag=2;guiJumpPage(infrared_led_wID,GUI_NULL,infrared_PageEnterEvent);IMG = 1;break;
-		case 3: key_flag=3;guiJumpPage(infrared_led_wID2,GUI_NULL,infrared_PageEnterEvent2);IMG = 1;break;
-		case 4: key_flag=4;en_count(1,100);IMG = 50;guiJumpPage(infrared_led_wID,GUI_NULL,infrared_PageEnterEvent);break;
+		case 2: key_flag=6;guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);IMG = 1;break;
+		case 3: key_flag=2;guiJumpPage(infrared_led_wID,GUI_NULL,infrared_PageEnterEvent);IMG = 1;break;
+		case 4: key_flag=3;guiJumpPage(infrared_led_wID2,GUI_NULL,infrared_PageEnterEvent2);IMG = 1;break;
+		case 5: key_flag=4;en_count(1,100);IMG = 50;guiJumpPage(infrared_led_wID,GUI_NULL,infrared_PageEnterEvent);break;
 	}
 				
 }
@@ -197,8 +202,13 @@ void en_count(char first,char late)
 	else
 	{
 		if(En_oldcount < En_count)
-	{
-		
+		{
+			if(En_count==0&&En_oldcount==1)
+			{
+				IMG--;
+				if(IMG<first)
+					IMG = late;	
+			}
 			IMG++;
 			if(IMG>late)
 				IMG = first;
@@ -257,7 +267,7 @@ void red_led2()
 				red_arr[i] = 0;
 			}
 			key_flag2=0;
-			key_flag =6;
+			key_flag =1;
 			guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);	
 			printf("img = %d\n",IMG);
 			if(IMG==1)
@@ -317,7 +327,7 @@ void red_led4()
 				red_arr2[i] = 0;
 			}				
 			key_flag2=0;
-			key_flag =1;
+			key_flag =6;
 			guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);	
 			printf("img = %d\n",IMG);
 			if(IMG==1)
