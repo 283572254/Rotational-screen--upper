@@ -1,7 +1,7 @@
 .\obj\y6_eval_qspi.o: TDO_Y6xxBSP\Y6_StdPeriph_Driver\src\Y6_eval_qspi.c
 .\obj\y6_eval_qspi.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
 .\obj\y6_eval_qspi.o: ..\inc\core_cm0.h
-.\obj\y6_eval_qspi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\y6_eval_qspi.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\y6_eval_qspi.o: ..\inc\core_cmInstr.h
 .\obj\y6_eval_qspi.o: ..\inc\core_cmFunc.h
 .\obj\y6_eval_qspi.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\system_Y6.h
@@ -13,4 +13,4 @@
 .\obj\y6_eval_qspi.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_eval_qspi.h
 .\obj\y6_eval_qspi.o: ..\inc\core_cm0.h
 .\obj\y6_eval_qspi.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_qspi.h
-.\obj\y6_eval_qspi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\y6_eval_qspi.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h

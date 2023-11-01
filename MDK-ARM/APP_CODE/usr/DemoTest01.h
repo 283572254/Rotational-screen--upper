@@ -186,7 +186,7 @@ gui_Err red_led_PageEnterEvent2(gui_int32 argc , const char **argv);
 static gui_Err red_led_timeoutEvent2 (gui_int32 argc , const char **argv);
 gui_Err red_led_LeaveEvent2(gui_int32 argc , const char **argv);
 
-/****************************************************  infrared led page*************************************************/	
+/**************************************************** num 1-100 led page*************************************************/	
 #define infrared_led_wID 0x1613
 static const PAGE_INFO infrared_led_Page={
 	{.wType = WIDGET_TYPE_PAGE , .wId = infrared_led_wID , .wVscope = WIDGET_VS_PRIVATE},

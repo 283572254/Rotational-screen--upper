@@ -12,7 +12,7 @@ extern char key_flag;
 char menu[4]={8,0,0,0};      //menu[0]: text image                  menu[1]: whether to make an appointment
 							// menu[2]: set appointment time     menu[3]: running time (minutes)
 
-char img_id[]={0,1,36,2,3,4};
+char img_id[]={0,1,36,0,2,3,4};
 char img_id1[]={21,5,6,7,8,9,10};
 char img_id2[]={20,11,12,13,14,15,16,17,18,19};// small num
 char img_id3[]={22,23}; //on off

@@ -2,7 +2,7 @@
 .\obj\y6_gpio.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_gpio.h
 .\obj\y6_gpio.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
 .\obj\y6_gpio.o: ..\inc\core_cm0.h
-.\obj\y6_gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\y6_gpio.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\y6_gpio.o: ..\inc\core_cmInstr.h
 .\obj\y6_gpio.o: ..\inc\core_cmFunc.h
 .\obj\y6_gpio.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\system_Y6.h

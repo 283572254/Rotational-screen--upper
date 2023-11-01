@@ -3,7 +3,7 @@
 .\obj\led.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_gpio.h
 .\obj\led.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
 .\obj\led.o: ..\inc\core_cm0.h
-.\obj\led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\led.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\led.o: ..\inc\core_cmInstr.h
 .\obj\led.o: ..\inc\core_cmFunc.h
 .\obj\led.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\system_Y6.h
