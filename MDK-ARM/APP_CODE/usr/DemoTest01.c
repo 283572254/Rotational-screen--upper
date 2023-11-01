@@ -118,7 +118,7 @@ gui_Err red_led_LeaveEvent2(gui_int32 argc , const char **argv)
 	return GUI_EOK;
 }
 
-/**************************************************infrared action to enter the page**********************************************/
+/**************************************************1-100 action to enter the page**********************************************/
 gui_Err infrared_PageEnterEvent(gui_int32 argc , const char **argv)
 {
 	guiCreateWidget((const void *)&infrared_led_Page);
@@ -147,7 +147,7 @@ gui_Err infrared_LeaveEvent(gui_int32 argc , const char **argv)
 {	
 	return GUI_EOK;
 }
-/**************************************************infrared led2 action to enter the page**********************************************/
+/**************************************************on-off action to enter the page**********************************************/
 gui_Err infrared_PageEnterEvent2(gui_int32 argc , const char **argv)
 {
 	guiCreateWidget((const void *)&infrared_led_Page2);

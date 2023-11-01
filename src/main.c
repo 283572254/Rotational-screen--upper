@@ -1,5 +1,4 @@
 
-
 /* Includes ------------------------------------------------------------------*/
 #include "stdio.h"
 #include "stdlib.h"
@@ -75,6 +74,7 @@ int En_count,En_oldcount=0;
 uint8_t red_arr[5]={0},red_arr2[5]={0};
 uint8_t printf_arr[7]={0};
 uint8_t red_img[5] = {0},red_img2=0;
+enum protocol{g_red_f1=1,g_red_f2,g_red_l,g_infreared,g_Pump,g_fun};
 #define Get_Key()     GPIO_ReadPin(GPIO0,GPIO_Pin_28)
 int main()
 {
@@ -152,7 +152,7 @@ void rotary_control()
 		printf("img = %d\n",IMG);														
 		switch(key_flag)
 		{
-			case 0:en_count(1,5);guiJumpPage(Test01Page_wID,GUI_NULL,DemoMain_PageEnterEvent);break;
+			case 0:en_count(1,6);guiJumpPage(Test01Page_wID,GUI_NULL,DemoMain_PageEnterEvent);break;
 			case 1:en_count(1,6);guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);break;
 			case 2:en_count(1,100);guiJumpPage(infrared_led_wID,GUI_NULL,infrared_PageEnterEvent);printf("%d,%d,%d",IMG/100,(IMG/10)%10,IMG%10);break;
 			case 3:en_count(1,2);guiJumpPage(infrared_led_wID2,GUI_NULL,infrared_PageEnterEvent2);break;
@@ -191,7 +191,7 @@ void page_init()
 				
 }
 	
-	
+uint8_t light_group = 0;
 void en_count(char first,char late)
 {
 	if(En_oldcount==0)
@@ -249,6 +249,15 @@ void en_count(char first,char late)
 void red_light_group()
 {
 	guiJumpPage(infrared_led_wID,GUI_NULL,infrared_PageEnterEvent);
+	switch (IMG)
+	{
+	case 1:light_group = 1;break;
+	case 2:light_group = 2;break;
+	case 3:light_group = 3;break;
+	case 4:light_group = 4;break;
+	default:
+		break;
+	}
 	if(key_flag==10)
 	{
 		key_flag2++;	
@@ -256,10 +265,7 @@ void red_light_group()
 		{
 			key_flag = 11;
 			key_flag2=0;
-			guiJumpPage(infrared_led_wID,GUI_NULL,infrared_PageEnterEvent2);
-			printf_arr[2] = IMG/100;
-			printf_arr[3] = (IMG/10)%10;
-			printf_arr[4] = IMG%10;
+			guiJumpPage(infrared_led_wID,GUI_NULL,infrared_PageEnterEvent);
 			IMG = 1;
 			
 		}
@@ -298,7 +304,7 @@ void red_light_on_off()
 			printf("img = %d\n",IMG);
 			if(IMG == 1)
 			{
-				printf_arr[0] = 3;printf_arr[1] = 1;
+				printf_arr[0] = 3;printf_arr[1] = 1;printf_arr[6] = light_group;
 				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);
@@ -357,7 +363,7 @@ void red_led2()
 			printf("img = %d\n",IMG);
 			if(IMG==1)
 			{
-				printf_arr[0] = 1;printf_arr[1] = 1;
+				printf_arr[0] = g_red_f1;printf_arr[1] = 1;
 				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);	
@@ -365,7 +371,7 @@ void red_led2()
 			}
 			else
 			{
-				printf_arr[0] = 1;printf_arr[1] = 0;
+				printf_arr[0] = g_red_f1;printf_arr[1] = 0;
 				for(int i=0;i<5;i++)
 					printf_arr[i+2] = 0;
 				for(int i=0;i<7;i++)
@@ -417,7 +423,7 @@ void red_led4()
 			printf("img = %d\n",IMG);
 			if(IMG==1)
 			{
-				printf_arr[0] = 2;printf_arr[1] = 1;
+				printf_arr[0] = g_red_f2;printf_arr[1] = 1;
 				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);	
@@ -425,7 +431,7 @@ void red_led4()
 			}
 			else
 			{
-				printf_arr[0] = 1;printf_arr[1] = 0;
+				printf_arr[0] = g_red_f2;printf_arr[1] = 0;
 				for(int i=0;i<5;i++)
 					printf_arr[i+2] = 0;
 				for(int i=0;i<7;i++)
@@ -474,7 +480,7 @@ void infrared_red2()
 			printf("img = %d\n",IMG);
 			if(IMG == 1)
 			{
-				printf_arr[0] = 3;printf_arr[1] = 1;
+				printf_arr[0] = g_infreared;printf_arr[1] = 1;
 				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);
@@ -482,7 +488,7 @@ void infrared_red2()
 			}
 			else
 			{
-				printf_arr[0] = 3;printf_arr[1] = 0;
+				printf_arr[0] = g_infreared;printf_arr[1] = 0;
 				for(int i=0;i<5;i++)
 					printf_arr[i+2] = 0;
 				for(int i=0;i<7;i++)
@@ -513,7 +519,7 @@ void pump()
 			printf("img = %d\n",IMG);
 			if(IMG==1)
 			{
-				printf_arr[0] = 4;printf_arr[1] = 1;
+				printf_arr[0] = g_Pump;printf_arr[1] = 1;
 				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);	
@@ -521,7 +527,7 @@ void pump()
 			}
 			else
 			{
-				printf_arr[0] = 4;printf_arr[1] = 0;
+				printf_arr[0] = g_Pump;printf_arr[1] = 0;
 				for(int i=0;i<5;i++)
 					printf_arr[i+2] = 0;
 				for(int i=0;i<7;i++)
@@ -574,7 +580,7 @@ void fan2()
 			printf("img = %d\n",IMG);
 			if(IMG==1)
 			{
-				printf_arr[0] = 5;printf_arr[1] = 1;
+				printf_arr[0] = g_fun;printf_arr[1] = 1;
 				for(int i=0;i<7;i++)
 				{
 					printf("%d",printf_arr[i]);	
@@ -582,7 +588,7 @@ void fan2()
 			}
 			else
 			{
-				printf_arr[0] = 5;printf_arr[1] = 0;
+				printf_arr[0] = g_fun;printf_arr[1] = 0;
 				for(int i=0;i<5;i++)
 					printf_arr[i+2] = 0;
 				for(int i=0;i<7;i++)

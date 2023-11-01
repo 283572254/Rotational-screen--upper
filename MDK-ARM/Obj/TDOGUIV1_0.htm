@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Obj\TDOGUIV1_0.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Obj\TDOGUIV1_0.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Thu Nov 02 00:11:02 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Thu Nov 02 00:41:20 2023
 <BR><P>
 <H3>Maximum Stack Usage =        700 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -110,7 +110,6 @@ Function Pointers
  <LI><a href="#[6b]">infrared_PageEnterEvent2</a> from demotest01.o(i.infrared_PageEnterEvent2) referenced from main.o(i.infrared_red)
  <LI><a href="#[6b]">infrared_PageEnterEvent2</a> from demotest01.o(i.infrared_PageEnterEvent2) referenced from main.o(i.page_init)
  <LI><a href="#[6b]">infrared_PageEnterEvent2</a> from demotest01.o(i.infrared_PageEnterEvent2) referenced from main.o(i.pump)
- <LI><a href="#[6b]">infrared_PageEnterEvent2</a> from demotest01.o(i.infrared_PageEnterEvent2) referenced from main.o(i.red_light_group)
  <LI><a href="#[6b]">infrared_PageEnterEvent2</a> from demotest01.o(i.infrared_PageEnterEvent2) referenced from main.o(i.red_light_num)
  <LI><a href="#[6b]">infrared_PageEnterEvent2</a> from demotest01.o(i.infrared_PageEnterEvent2) referenced from main.o(i.rotary_control)
  <LI><a href="#[6c]">infrared_timeoutEvent</a> from demotest01.o(i.infrared_timeoutEvent) referenced from demotest01.o(i.infrared_PageEnterEvent)
@@ -793,7 +792,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rotary_control
 <LI><a href="#[240]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;red_light_num
-<LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;red_light_group
 <LI><a href="#[231]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;infrared_red
 <LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fan
 <LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
@@ -1050,7 +1048,6 @@ Global Symbols
 <P><STRONG><a name="[20e]"></a>__aeabi_uwrite4</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, uwrite4.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiJumpPage
 <LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiSetWidgetPictureID
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_registerQRcodeBoxEvent
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_deleteQRcodeBox
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_createQRcodeBox
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inputTouchMsgHandle
@@ -1064,6 +1061,7 @@ Global Symbols
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_registerGraphEvent
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_deleteGraph
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_createGraph
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w_registerQRcodeBoxEvent
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;widget_TimeoutAdjustVirtualGif
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;widget_TimeoutAdjustRollTextBox
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;widget_TimeoutAdjustGtimer
@@ -2816,11 +2814,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiRegisterEvent
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiCreateWidget
 </UL>
-<BR>[Address Reference Count : 7]<UL><LI> main.o(i.fan)
+<BR>[Address Reference Count : 6]<UL><LI> main.o(i.fan)
 <LI> main.o(i.infrared_red)
 <LI> main.o(i.page_init)
 <LI> main.o(i.pump)
-<LI> main.o(i.red_light_group)
 <LI> main.o(i.red_light_num)
 <LI> main.o(i.rotary_control)
 </UL>
@@ -2996,7 +2993,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_control
 </UL>
 
-<P><STRONG><a name="[23e]"></a>red_led4</STRONG> (Thumb, 142 bytes, Stack size 24 bytes, main.o(i.red_led4))
+<P><STRONG><a name="[23e]"></a>red_led4</STRONG> (Thumb, 140 bytes, Stack size 24 bytes, main.o(i.red_led4))
 <BR><BR>[Stack]<UL><LI>Max Depth = 388<LI>Call Chain = red_led4 &rArr; guiJumpPage &rArr; wWidgetLoad &rArr; wGetResoureAddr &rArr; guiDebug &rArr; vsnprintf &rArr; PutUnsignedInt &rArr;  PutUnsignedInt (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiJumpPage
@@ -3028,11 +3025,10 @@ Global Symbols
 <LI> main.o(i.red_led3)
 <LI> main.o(i.rotary_control)
 </UL>
-<P><STRONG><a name="[23f]"></a>red_light_group</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, main.o(i.red_light_group))
+<P><STRONG><a name="[23f]"></a>red_light_group</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, main.o(i.red_light_group))
 <BR><BR>[Stack]<UL><LI>Max Depth = 380<LI>Call Chain = red_light_group &rArr; guiJumpPage &rArr; wWidgetLoad &rArr; wGetResoureAddr &rArr; guiDebug &rArr; vsnprintf &rArr; PutUnsignedInt &rArr;  PutUnsignedInt (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiJumpPage
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_control
 </UL>
@@ -3046,7 +3042,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_control
 </UL>
 
-<P><STRONG><a name="[241]"></a>red_light_on_off</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, main.o(i.red_light_on_off))
+<P><STRONG><a name="[241]"></a>red_light_on_off</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, main.o(i.red_light_on_off))
 <BR><BR>[Stack]<UL><LI>Max Depth = 388<LI>Call Chain = red_light_on_off &rArr; guiJumpPage &rArr; wWidgetLoad &rArr; wGetResoureAddr &rArr; guiDebug &rArr; vsnprintf &rArr; PutUnsignedInt &rArr;  PutUnsignedInt (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;guiJumpPage
