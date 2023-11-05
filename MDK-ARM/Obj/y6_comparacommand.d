@@ -5,8 +5,8 @@
 .\obj\y6_comparacommand.o: .\gHMIY6GUI\includes\UsersUse\gWidgetInfo.h
 .\obj\y6_comparacommand.o: TDO_Driver\Y6_command.h
 .\obj\y6_comparacommand.o: .\gHMIY6GUI\includes\UsersProvided\comInterface.h
-.\obj\y6_comparacommand.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
-.\obj\y6_comparacommand.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\y6_comparacommand.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\y6_comparacommand.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\obj\y6_comparacommand.o: .\Driver\lcdDriver.h
 .\obj\y6_comparacommand.o: .\gHMIY6GUI\includes\UsersProvided\lcdInterface.h
 .\obj\y6_comparacommand.o: .\TDO_Driver\Y6_include_conf.h
@@ -19,7 +19,7 @@
 .\obj\y6_comparacommand.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\misc.h
 .\obj\y6_comparacommand.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
 .\obj\y6_comparacommand.o: TDO_Driver\pwm.h
-.\obj\y6_comparacommand.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\y6_comparacommand.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\y6_comparacommand.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_tim.h
 .\obj\y6_comparacommand.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_gpio.h
 .\obj\y6_comparacommand.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_rcc.h

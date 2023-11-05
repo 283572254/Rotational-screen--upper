@@ -1,10 +1,10 @@
 .\obj\pwm.o: TDO_Driver\PWM.c
 .\obj\pwm.o: TDO_Driver\pwm.h
-.\obj\pwm.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
-.\obj\pwm.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\pwm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\pwm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\pwm.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
 .\obj\pwm.o: ..\inc\core_cm0.h
-.\obj\pwm.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\pwm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\pwm.o: ..\inc\core_cmInstr.h
 .\obj\pwm.o: ..\inc\core_cmFunc.h
 .\obj\pwm.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\system_Y6.h

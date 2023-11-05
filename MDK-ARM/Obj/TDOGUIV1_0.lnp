@@ -45,6 +45,6 @@
 ".\obj\demotest01.o"
 ".\obj\encoder.o"
 --library_type=microlib --strict --scatter ".\Obj\Y6_Xip.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\List\TDOGUIV1_0.map" -o .\Obj\TDOGUIV1_0.axf

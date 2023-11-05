@@ -3,8 +3,8 @@
 .\obj\y6_command.o: .\gHMIY6GUI\includes\UsersProvided\comInterface.h
 .\obj\y6_command.o: .\gHMIY6GUI\includes\UsersUse\gStdint.h
 .\obj\y6_command.o: .\gHMIY6GUI\includes\UsersUse\gReturn.h
-.\obj\y6_command.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
-.\obj\y6_command.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
-.\obj\y6_command.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\y6_command.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\y6_command.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\y6_command.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\y6_command.o: .\gHMIY6GUI\includes\UsersProvided\memoryInterface.h
 .\obj\y6_command.o: TDO_Driver\Y6_include_conf.h

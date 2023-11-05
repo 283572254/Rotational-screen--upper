@@ -6,7 +6,7 @@
 .\obj\lcdinterface.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_gpio.h
 .\obj\lcdinterface.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
 .\obj\lcdinterface.o: ..\inc\core_cm0.h
-.\obj\lcdinterface.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\lcdinterface.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\lcdinterface.o: ..\inc\core_cmInstr.h
 .\obj\lcdinterface.o: ..\inc\core_cmFunc.h
 .\obj\lcdinterface.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\system_Y6.h
@@ -17,5 +17,5 @@
 .\obj\lcdinterface.o: Driver\lcdDriver.h
 .\obj\lcdinterface.o: .\TDO_Driver\Y6_include_conf.h
 .\obj\lcdinterface.o: Driver\QspiDMA.h
-.\obj\lcdinterface.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
-.\obj\lcdinterface.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\lcdinterface.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\lcdinterface.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

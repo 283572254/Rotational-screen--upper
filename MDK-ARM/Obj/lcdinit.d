@@ -1,7 +1,7 @@
 .\obj\lcdinit.o: Driver\lcdInit.c
 .\obj\lcdinit.o: Driver\lcdInit.h
 .\obj\lcdinit.o: .\gHMIY6GUI\includes\UsersUse\gStdint.h
-.\obj\lcdinit.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\lcdinit.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\lcdinit.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
 .\obj\lcdinit.o: ..\inc\core_cm0.h
 .\obj\lcdinit.o: ..\inc\core_cmInstr.h
@@ -21,5 +21,5 @@
 .\obj\lcdinit.o: Driver\QspiDMA.h
 .\obj\lcdinit.o: .\TDO_Y6xxBSP\Y6_StdPeriph_Driver\inc\Y6_tim.h
 .\obj\lcdinit.o: .\TDO_Driver\pwm.h
-.\obj\lcdinit.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
-.\obj\lcdinit.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\lcdinit.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\lcdinit.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

@@ -4,7 +4,7 @@
 .\obj\flashinterface.o: Driver\Y6_xip_write.h
 .\obj\flashinterface.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\Y6.h
 .\obj\flashinterface.o: ..\inc\core_cm0.h
-.\obj\flashinterface.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\flashinterface.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\flashinterface.o: ..\inc\core_cmInstr.h
 .\obj\flashinterface.o: ..\inc\core_cmFunc.h
 .\obj\flashinterface.o: .\TDO_Y6xxBSP\CMSIS\Device\TDO\Y6\Include\system_Y6.h

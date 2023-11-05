@@ -48,7 +48,7 @@ static const PAGE_INFO red_led_Page={
 	{.x = 0 , .y = 0 , .width = 240 , .height = 240},
 	.backMode = WIDGET_BACKMODE_PIC , 
 	.backColor = 0xFFFF,
-	.picId = 21,
+	.picId = 15,
 	.enterEvent = GUI_NULL,
 	.leaveEvent = GUI_NULL,
 	.pressEvent = GUI_NULL,
@@ -59,7 +59,7 @@ static const PAGE_INFO red_led_Page={
 static const PICTUREBOX_INFO red_led_Pic={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_PicwID , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 0 , .y = 0 , .width = 240 , .height = 240},    
- .picId = 21,
+ .picId = 15,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
@@ -83,7 +83,7 @@ static const PAGE_INFO red_led_Page2={
 	{.x = 0 , .y = 0 , .width = 240 , .height = 240},
 	.backMode = WIDGET_BACKMODE_PIC , 
 	.backColor = 0xFFFF,
- .picId = 0,
+ 	.picId = 0,
 	.enterEvent = GUI_NULL,
 	.leaveEvent = GUI_NULL,
 	.pressEvent = GUI_NULL,
@@ -103,7 +103,7 @@ static const PICTUREBOX_INFO red_led_Pic2={
 static const PICTUREBOX_INFO red_led_1={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_ID1 , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 10 , .y = 102 , .width = 36 , .height = 36},    
- .picId = 20,
+.picId = 16,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
@@ -112,7 +112,7 @@ static const PICTUREBOX_INFO red_led_1={
 static const PICTUREBOX_INFO red_led_2={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_ID2 , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 50 , .y = 102 , .width = 36 , .height = 36},    
- .picId = 20,
+.picId = 16,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
@@ -121,7 +121,7 @@ static const PICTUREBOX_INFO red_led_2={
 static const PICTUREBOX_INFO red_led_5={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_ID5 , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 90 , .y = 102 , .width = 36 , .height = 36},    
- .picId = 20,
+.picId = 16,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
@@ -130,7 +130,7 @@ static const PICTUREBOX_INFO red_led_5={
 static const PICTUREBOX_INFO red_led_8={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_ID8 , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 130 , .y = 102 , .width = 36 , .height = 36},    
- .picId = 20,
+.picId = 16,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
@@ -139,7 +139,7 @@ static const PICTUREBOX_INFO red_led_8={
 static const PICTUREBOX_INFO red_led_10={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_ID10 , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 170 , .y = 102 , .width = 36 , .height = 36},    
- .picId = 20,
+.picId = 16,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
@@ -148,17 +148,17 @@ static const PICTUREBOX_INFO red_led_10={
 static const PICTUREBOX_INFO red_led_10_1={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_ID10_1 , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 200 , .y = 102 , .width = 36 , .height = 36},    
- .picId = 20,
+.picId = 16,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
 };
 
-#define red_led_location_ID 0x1624 // 红外组别确认
+#define red_led_location_ID 0x1624 // 红组别确认
 static const PICTUREBOX_INFO red_led_location={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_location_ID , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 5 , .y = 102 , .width = 36 , .height = 36},    
- .picId = 20,
+.picId = 16,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
@@ -167,7 +167,7 @@ static const PICTUREBOX_INFO red_led_location={
 static const PICTUREBOX_INFO red_led_onoff={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = red_led_onoff_ID , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 90 , .y = 160 , .width = 60 , .height = 60},    
- .picId = 22,
+ .picId = 27,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
@@ -221,7 +221,7 @@ static const GTIMER_INFO infrared_led_GTimer={
 static const PICTUREBOX_INFO infrared_led_1={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = infrared_led_ID1 , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 66 , .y = 102 , .width = 34 , .height = 46},    
- .picId = 24,
+ .picId = 16,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
@@ -230,7 +230,7 @@ static const PICTUREBOX_INFO infrared_led_1={
 static const PICTUREBOX_INFO infrared_led_2={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = infrared_led_ID2 , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 102 , .y = 102 , .width = 34 , .height = 46},    
- .picId = 24,
+ .picId = 16,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
@@ -240,14 +240,14 @@ static const PICTUREBOX_INFO infrared_led_2={
 static const PICTUREBOX_INFO infrared_led_3={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = infrared_led_ID3 , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 138 , .y = 102 , .width = 34 , .height = 46},    
- .picId = 24,
+ .picId = 16,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
 };
 
-gui_Err infrared_PageEnterEvent(gui_int32 argc , const char **argv);
-static gui_Err infrared_timeoutEvent (gui_int32 argc , const char **argv);
+gui_Err num1_100EnterEvent(gui_int32 argc , const char **argv);
+static gui_Err num1_100timeoutEvent (gui_int32 argc , const char **argv);
 gui_Err infrared_LeaveEvent(gui_int32 argc , const char **argv);
 /****************************************************  infrared_led2 page*************************************************/	
 #define infrared_led_wID2 0x1619
@@ -267,7 +267,7 @@ static const PAGE_INFO infrared_led_Page2={
 static const PICTUREBOX_INFO infrared_led_Pic2={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = infrared_led_PicwID2 , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 0 , .y = 0 , .width = 240 , .height = 240},    
- .picId = 0,
+ .picId = 7,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
@@ -281,21 +281,31 @@ static const GTIMER_INFO infrared_led_GTimer2={
  .timeoutEvent = GUI_NULL
 };
 
-gui_Err infrared_PageEnterEvent2(gui_int32 argc , const char **argv);
-static gui_Err infrared_timeoutEvent2(gui_int32 argc , const char **argv);
-gui_Err infrared_LeaveEvent2(gui_int32 argc , const char **argv);
+gui_Err on_off_Event(gui_int32 argc , const char **argv);
+static gui_Err on_off_timeoutEvent2 (gui_int32 argc , const char **argv);
+gui_Err on_off_LeaveEvent2(gui_int32 argc , const char **argv);
 
 /****************************************************  Pump page*************************************************/	
 #define infrared_led_pump_ID 0x1622 //
 static const PICTUREBOX_INFO infrared_led_pump={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = infrared_led_pump_ID , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 0 , .y = 0 , .width = 240 , .height = 240},    
- .picId = 33,
+ .picId = 7,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
 };
 //ID 0x1624
+/****************************************************  light page*************************************************/
+#define light_PicwID2 0x1620 //
+static const PICTUREBOX_INFO light_Pic2={
+ {.wType = WIDGET_TYPE_PICTUREBOX , .wId = light_PicwID2 , .wVscope = WIDGET_VS_PRIVATE},
+ {.x = 70 , .y = 30 , .width = 240 , .height = 240},    
+ .picId = 26,
+ .pressEvent = GUI_NULL,               
+ .releaseEvent = GUI_NULL,             
+ .updateEvent = GUI_NULL  
+};
 /****************************************************  shortKey page*************************************************/	
 #define Short_Key_PwID 0x1504
 static const PAGE_INFO Encoder_shortKey={
@@ -367,7 +377,7 @@ static const PICTUREBOX_INFO Minutes1_Pic={
 static const PICTUREBOX_INFO Minutes2_Pic={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = Minutes2_PicwID , .wVscope = WIDGET_VS_PRIVATE},
  {.x = 175 , .y = 97 , .width = 34 , .height = 46},    
- .picId = 20,
+.picId = 16,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
