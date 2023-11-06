@@ -151,7 +151,7 @@ void rotary_control()
 												
 		Logo=0;	
 		//printf("img = %d\n",IMG);		
-										
+									
 		switch(key_flag)
 		{
 			case g_page_init:page_init();break;
@@ -182,8 +182,8 @@ void page_init()
 		switch(IMG)
 		{
 			case 0:guiJumpPage(Test01Page_wID,GUI_NULL,DemoMain_PageEnterEvent);IMG = 1;break;
-			case 1: IMG = 0;key_flag=g_red_led;red_led();break;
-			case 2: IMG = 0;key_flag=g_red_led3;red_led3();break;
+			case 1: IMG = 1;key_flag=g_red_led;red_led();break;
+			case 2: IMG = 1;key_flag=g_red_led3;red_led3();break;
 			case 3: IMG = 1;key_flag=g_red_light_group;red_light_group();break;
 			case 4: IMG = 1;key_flag=g_infrared_red;infrared_red();break;
 			case 5: IMG = 1;key_flag=g_pump;pump();break;
@@ -253,10 +253,9 @@ uint8_t light_group_key=0;
 void red_light_group()
 {
 	
-	en_count(1,4);guiJumpPage(infrared_led_wID,GUI_NULL,num1_100EnterEvent);
+	en_count(1,4);guiJumpPage(grounp_PicwID2,GUI_NULL,groud1_100EnterEvent);
 	if(key_enable_flag==1)
 	{
-
 		if(key_flag==g_red_light_group)
 		{
 			light_group_key++;	
@@ -264,7 +263,7 @@ void red_light_group()
 			{
 				key_flag = g_red_light_on_off;
 				light_group_key=1;
-				guiJumpPage(infrared_led_wID2,GUI_NULL,on_off_Event);
+				guiJumpPage(on_off_led_wID2,GUI_NULL,on_off_Event);
 				switch (IMG)
 				{
 				case 1:g_light_group = 1;break;
@@ -285,22 +284,18 @@ uint8_t light_on_off_key = 0;
 void red_light_on_off()
 {
 	
-	en_count(1,2);guiJumpPage(infrared_led_wID2,GUI_NULL,on_off_Event);
+	en_count(1,2);guiJumpPage(on_off_led_wID2,GUI_NULL,on_off_Event);
 	if(key_enable_flag==1)
 	{
 		if(key_flag==g_red_light_on_off)
-		{
-			light_on_off_key++;	
-			if(light_on_off_key>1)
-			{
-				
-				light_on_off_key=1;
+		{	
+				light_on_off_key=2;
 				
 				if(IMG == 1)
 				{	
 					key_flag = g_red_light_num;	
 					printf_arr[0] = gP_red_l;printf_arr[1] = 1;printf_arr[6] = g_light_group;	
-					guiJumpPage(infrared_led_wID,GUI_NULL,num1_100EnterEvent);
+					guiJumpPage(light_PicwID2,GUI_NULL,light1_100EnterEvent);
 				}
 				else
 				{
@@ -312,11 +307,11 @@ void red_light_on_off()
 						printf("%d",printf_arr[i]);
 					}	
 					printf("\r\n");	
-					key_flag = g_red_light_num;	guiJumpPage(infrared_led_wID,GUI_NULL,num1_100EnterEvent);		
+					key_flag = g_red_light_group;	guiJumpPage(grounp_PicwID2,GUI_NULL,groud1_100EnterEvent);		
 				}
 					
 				IMG = 1;
-			}
+			
 		}		
 	}
 
@@ -326,7 +321,7 @@ uint8_t light_num_key = 0;
 void red_light_num()
 {
 	
-	en_count(1,100);guiJumpPage(infrared_led_wID,GUI_NULL,num1_100EnterEvent);
+	en_count(1,100);guiJumpPage(light_PicwID2,GUI_NULL,light1_100EnterEvent);
 	if(key_enable_flag==1)
 	{
 		if(key_flag==g_red_light_num)
@@ -337,7 +332,7 @@ void red_light_num()
 				key_flag = g_red_light_group;
 				light_num_key=0;
 				light_group_key = 1;
-				guiJumpPage(infrared_led_wID2,GUI_NULL,num1_100EnterEvent);
+				guiJumpPage(grounp_PicwID2,GUI_NULL,groud1_100EnterEvent);
 				IMG = 1;	
 			}
 		}		
@@ -353,30 +348,33 @@ void red_light_num()
 		}printf("\r\n");	
 	}
 }
+uint8_t g_red_led1_key=0;
 void red_led()
 {
 	en_count(1,6);guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);
-
-	
 	if(key_enable_flag==1)
 	{
-		if(key_flag==1)
+		g_red_led1_key++;
+		if(g_red_led1_key>1)
 		{
-			//guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);
-			switch(IMG)
+			g_red_led1_key=1;
+			if(key_flag==g_red_led)
 			{
-				case 1:red_arr[0]=1;red_img[0]=1;break;
-				case 2:red_arr[1]=1;red_img[1]=2;break;
-				case 3:red_arr[2]=1;red_img[2]=5;break;
-				case 4:red_arr[3]=1;red_img[3]=8;break;
-				case 5:red_arr[4]=1;red_img[4]=10;break;
-				case 6:key_flag=5;guiJumpPage(Tred_led_wID2,GUI_NULL,red_led_PageEnterEvent2);IMG=1;break;
-				default:break;
-			}
-		}		
+				//guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);
+				switch(IMG)
+				{
+					case 1:red_arr[0]=1;red_img[0]=1;break;
+					case 2:red_arr[1]=1;red_img[1]=2;break;
+					case 3:red_arr[2]=1;red_img[2]=5;break;
+					case 4:red_arr[3]=1;red_img[3]=8;break;
+					case 5:red_arr[4]=1;red_img[4]=10;break;
+					case 6:key_flag=g_red_led2;guiJumpPage(Tred_led_wID2,GUI_NULL,red_led_PageEnterEvent2);IMG=1;break;
+					default:break;
+				}
+			}				
+		}
+	
 	}
-
-
 }	
 void red_led2()
 {
@@ -423,25 +421,31 @@ void red_led2()
 	}
 
 }
+uint8_t g_red_led3_key=0;
 void red_led3()
 {
 	en_count(1,6);guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);
 	if(key_enable_flag==1)
 	{
-		if(key_flag==6)
+		g_red_led3_key++;
+		if(g_red_led3_key>1)
 		{
-			guiJumpPage(Tred_led_wID,GUI_NULL,red_led_PageEnterEvent);
-			switch(IMG)
+			g_red_led3_key=1;
+			if(key_flag==g_red_led3)
 			{
-				case 1:red_arr2[0]=1;red_img[0]=1;break;
-				case 2:red_arr2[1]=1;red_img[1]=2;break;
-				case 3:red_arr2[2]=1;red_img[2]=5;break;
-				case 4:red_arr2[3]=1;red_img[3]=8;break;
-				case 5:red_arr2[4]=1;red_img[4]=10;break;
-				case 6:key_flag=7;guiJumpPage(Tred_led_wID2,GUI_NULL,red_led_PageEnterEvent2);IMG=1;break;//��ת��ȷ�Ͻ���,��ʾ��ѡ�������
-				default:break;
-			}
-		}		
+				switch(IMG)
+				{
+					case 1:red_arr2[0]=1;red_img[0]=1;break;
+					case 2:red_arr2[1]=1;red_img[1]=2;break;
+					case 3:red_arr2[2]=1;red_img[2]=5;break;
+					case 4:red_arr2[3]=1;red_img[3]=8;break;
+					case 5:red_arr2[4]=1;red_img[4]=10;break;
+					case 6:key_flag=7;guiJumpPage(Tred_led_wID2,GUI_NULL,red_led_PageEnterEvent2);IMG=1;break;//��ת��ȷ�Ͻ���,��ʾ��ѡ�������
+					default:break;
+				}
+			}			
+		}
+		
 	}
 
 
@@ -494,7 +498,7 @@ uint8_t infrared_led_key=0;
 void infrared_red()
 {
 	
-	en_count(1,2);guiJumpPage(infrared_led_wID2,GUI_NULL,on_off_Event);
+	en_count(1,2);guiJumpPage(on_off_led_wID2,GUI_NULL,on_off_Event);
 	if(key_enable_flag==1)
 	{
 		if(key_flag==g_infrared_red)
@@ -509,7 +513,7 @@ void infrared_red()
 				{
 					key_flag = g_infrared_red2;
 					printf_arr[0] = gP_infreared;printf_arr[1] = 1;
-					guiJumpPage(infrared_led_wID,GUI_NULL,num1_100EnterEvent);
+					guiJumpPage(num1_100_led_wID,GUI_NULL,num1_100EnterEvent);
 				}
 				else
 				{
@@ -532,7 +536,7 @@ void infrared_red2()
 {
 	
 	en_count(1,100);
-	guiJumpPage(infrared_led_wID,GUI_NULL,num1_100EnterEvent);
+	guiJumpPage(num1_100_led_wID,GUI_NULL,num1_100EnterEvent);
 	if(key_enable_flag==1)
 	{
 		if(key_flag==g_infrared_red2)
@@ -542,7 +546,7 @@ void infrared_red2()
 			{
 				key_flag = g_infrared_red;
 				infrared_led_key2=0;
-				guiJumpPage(infrared_led_wID2,GUI_NULL,on_off_Event);
+				guiJumpPage(on_off_led_wID2,GUI_NULL,on_off_Event);
 				IMG = 1;
 			}
 
@@ -566,7 +570,7 @@ uint8_t pump_key=0;
 void pump()
 {
 	
-	en_count(1,2);guiJumpPage(infrared_led_wID2,GUI_NULL,on_off_Event);
+	en_count(1,2);guiJumpPage(on_off_led_wID2,GUI_NULL,on_off_Event);
 	if(key_enable_flag==1)
 	{
 		if(key_flag==g_pump)
@@ -608,7 +612,7 @@ uint8_t fan_key = 0;
 void fan()
 {
 	
-	en_count(1,2);guiJumpPage(infrared_led_wID2,GUI_NULL,on_off_Event);
+	en_count(1,2);guiJumpPage(on_off_led_wID2,GUI_NULL,on_off_Event);
 	if(key_enable_flag==1)
 	{
 		if(key_flag==g_fan)
@@ -623,7 +627,7 @@ void fan()
 				{
 					key_flag = g_fan2;
 					printf_arr[0] = gP_fun;printf_arr[1] = 1;
-					guiJumpPage(infrared_led_wID,GUI_NULL,num1_100EnterEvent);
+					guiJumpPage(num1_100_led_wID,GUI_NULL,num1_100EnterEvent);
 				IMG = 50;
 				}
 				else
@@ -654,11 +658,11 @@ void fan2()
 		IMG = 50;
 		init_flag = 1;
 	}
-	guiJumpPage(infrared_led_wID,GUI_NULL,num1_100EnterEvent);
+	guiJumpPage(num1_100_led_wID,GUI_NULL,num1_100EnterEvent);
 	if(key_enable_flag==1)
 	{
 
-		guiJumpPage(infrared_led_wID,GUI_NULL,num1_100EnterEvent);
+		guiJumpPage(num1_100_led_wID,GUI_NULL,num1_100EnterEvent);
 
 		if(key_flag==g_fan2)
 		{
@@ -668,7 +672,7 @@ void fan2()
 				key_flag = g_fan;
 				fan_key2=0;
 				IMG = 1;
-				guiJumpPage(infrared_led_wID2,GUI_NULL,on_off_Event);	
+				guiJumpPage(on_off_led_wID2,GUI_NULL,on_off_Event);	
 			}
 		}
 	
@@ -702,7 +706,7 @@ void all_zero()
 	init_flag =0;
 	key_flag2 = 0;
 	key_flag = 0;
-	light_group_key = 0;light_on_off_key = 0;light_num_key = 0;
+	light_group_key = 0;light_on_off_key = 0;light_num_key = 0;g_red_led1_key=0;g_red_led3_key=0;
 	infrared_led_key=0;infrared_led_key2=0;pump_key=0; fan_key = 0;fan_key2 = 0;
 	IMG = 1;
 }

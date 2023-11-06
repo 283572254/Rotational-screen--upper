@@ -187,9 +187,9 @@ static gui_Err red_led_timeoutEvent2 (gui_int32 argc , const char **argv);
 gui_Err red_led_LeaveEvent2(gui_int32 argc , const char **argv);
 
 /**************************************************** num 1-100 led page*************************************************/	
-#define infrared_led_wID 0x1613
+#define num1_100_led_wID 0x1613
 static const PAGE_INFO infrared_led_Page={
-	{.wType = WIDGET_TYPE_PAGE , .wId = infrared_led_wID , .wVscope = WIDGET_VS_PRIVATE},
+	{.wType = WIDGET_TYPE_PAGE , .wId = num1_100_led_wID , .wVscope = WIDGET_VS_PRIVATE},
 	{.x = 0 , .y = 0 , .width = 240 , .height = 240},
 	.backMode = WIDGET_BACKMODE_PIC , 
 	.backColor = 0xFFFF,
@@ -249,10 +249,10 @@ static const PICTUREBOX_INFO infrared_led_3={
 gui_Err num1_100EnterEvent(gui_int32 argc , const char **argv);
 static gui_Err num1_100timeoutEvent (gui_int32 argc , const char **argv);
 gui_Err infrared_LeaveEvent(gui_int32 argc , const char **argv);
-/****************************************************  infrared_led2 page*************************************************/	
-#define infrared_led_wID2 0x1619
+/****************************************************  on-off page*************************************************/	
+#define on_off_led_wID2 0x1619
 static const PAGE_INFO infrared_led_Page2={
-	{.wType = WIDGET_TYPE_PAGE , .wId = infrared_led_wID2 , .wVscope = WIDGET_VS_PRIVATE},
+	{.wType = WIDGET_TYPE_PAGE , .wId = on_off_led_wID2 , .wVscope = WIDGET_VS_PRIVATE},
 	{.x = 0 , .y = 0 , .width = 240 , .height = 240},
 	.backMode = WIDGET_BACKMODE_PIC , 
 	.backColor = 0xFFFF,
@@ -297,15 +297,31 @@ static const PICTUREBOX_INFO infrared_led_pump={
 };
 //ID 0x1624
 /****************************************************  light page*************************************************/
-#define light_PicwID2 0x1620 //
+#define light_PicwID2 0x1625 //
 static const PICTUREBOX_INFO light_Pic2={
  {.wType = WIDGET_TYPE_PICTUREBOX , .wId = light_PicwID2 , .wVscope = WIDGET_VS_PRIVATE},
- {.x = 70 , .y = 30 , .width = 240 , .height = 240},    
+ {.x = 70 , .y = 30 , .width = 100 , .height = 72},    
  .picId = 26,
  .pressEvent = GUI_NULL,               
  .releaseEvent = GUI_NULL,             
  .updateEvent = GUI_NULL  
 };
+gui_Err light1_100EnterEvent(gui_int32 argc , const char **argv);
+static gui_Err light1_100timeoutEvent (gui_int32 argc , const char **argv);
+gui_Err light1_LeaveEvent(gui_int32 argc , const char **argv);
+/****************************************************  grounp page*************************************************/
+#define grounp_PicwID2 0x1625 //
+static const PICTUREBOX_INFO grounp_Pic2={
+ {.wType = WIDGET_TYPE_PICTUREBOX , .wId = grounp_PicwID2 , .wVscope = WIDGET_VS_PRIVATE},
+ {.x = 70 , .y = 30 , .width = 100 , .height = 72},    
+ .picId = 29,
+ .pressEvent = GUI_NULL,               
+ .releaseEvent = GUI_NULL,             
+ .updateEvent = GUI_NULL  
+};
+gui_Err groud1_100EnterEvent(gui_int32 argc , const char **argv);
+static gui_Err groud1_100timeoutEvent (gui_int32 argc , const char **argv);
+gui_Err groud1_LeaveEvent(gui_int32 argc , const char **argv);
 /****************************************************  shortKey page*************************************************/	
 #define Short_Key_PwID 0x1504
 static const PAGE_INFO Encoder_shortKey={
